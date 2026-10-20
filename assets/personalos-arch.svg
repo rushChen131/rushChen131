@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="780" viewBox="0 0 900 780" role="img" aria-label="PersonalOS 架构图">
+  <defs>
+    <marker id="va" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c3ccd4" />
+    </marker>
+  </defs>
+
+  <rect width="900" height="780" fill="#ffffff" />
+
+  <text x="40" y="44" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" font-weight="600" fill="#1f2328">PersonalOS · 架构</text>
+  <text x="40" y="66" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#8b949e">日记是唯一的写入入口，其余数据都是被它派生出来的</text>
+
+  <!-- ① 输入 -->
+  <g>
+    <rect x="40" y="76" width="820" height="76" rx="10" fill="#ffffff" stroke="#e3e8ee" />
+    <text x="64" y="119" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.4" fill="#8b949e">① 输入</text>
+    <line x1="176" y1="94" x2="176" y2="134" stroke="#eef1f4" />
+    <rect x="196" y="97" width="190" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="291" y="119" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">Journal（唯一手写输入）</text>
+  </g>
+  <line x1="450" y1="158" x2="450" y2="180" stroke="#c3ccd4" stroke-width="1.5" marker-end="url(#va)" />
+
+  <!-- ② 同步请求 -->
+  <g>
+    <rect x="40" y="186" width="820" height="76" rx="10" fill="#ffffff" stroke="#e3e8ee" />
+    <text x="64" y="229" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.4" fill="#8b949e">② 同步请求</text>
+    <line x1="176" y1="204" x2="176" y2="244" stroke="#eef1f4" />
+    <rect x="196" y="207" width="102" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="247" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">Next.js 15</text>
+    <text x="304" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="310" y="207" width="142" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="381" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">api/v1 · FastAPI</text>
+    <text x="458" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="464" y="207" width="112" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="520" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">AgentRuntime</text>
+    <text x="582" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="588" y="207" width="108" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="642" y="229" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">ToolRegistry</text>
+  </g>
+  <line x1="450" y1="268" x2="450" y2="290" stroke="#c3ccd4" stroke-width="1.5" marker-end="url(#va)" />
+
+  <!-- ③ AI 能力 -->
+  <g>
+    <rect x="40" y="296" width="820" height="76" rx="10" fill="#ffffff" stroke="#e3e8ee" />
+    <text x="64" y="339" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.4" fill="#8b949e">③ AI 能力</text>
+    <line x1="176" y1="314" x2="176" y2="354" stroke="#eef1f4" />
+    <rect x="196" y="317" width="182" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="287" y="339" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">LLMGateway · mock | openai</text>
+    <text x="384" y="339" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="390" y="317" width="150" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="465" y="339" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">RAGRuntime · 混合检索</text>
+    <text x="546" y="339" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="552" y="317" width="86" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="595" y="339" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">5 agents</text>
+  </g>
+  <line x1="450" y1="378" x2="450" y2="400" stroke="#c3ccd4" stroke-width="1.5" marker-end="url(#va)" />
+
+  <!-- ④ 事件扇出 -->
+  <g>
+    <rect x="40" y="406" width="820" height="76" rx="10" fill="#fcfdfe" stroke="#e3e8ee" />
+    <text x="64" y="449" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.4" fill="#8b949e">④ 事件扇出</text>
+    <line x1="176" y1="424" x2="176" y2="464" stroke="#eef1f4" />
+    <rect x="196" y="427" width="116" height="34" rx="8" fill="#ffffff" stroke="#dde4ea" />
+    <text x="254" y="449" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#1f2328">JournalCreated</text>
+    <text x="318" y="449" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="324" y="427" width="178" height="34" rx="8" fill="#ffffff" stroke="#dde4ea" />
+    <text x="413" y="449" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">EventBus · in-proc | redis</text>
+    <text x="508" y="449" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="514" y="427" width="96" height="34" rx="8" fill="#ffffff" stroke="#dde4ea" />
+    <text x="562" y="449" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">Jobs · arq</text>
+    <text x="628" y="449" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="10.5" fill="#9aa5b1">事务提交后异步执行</text>
+  </g>
+  <line x1="450" y1="488" x2="450" y2="510" stroke="#c3ccd4" stroke-width="1.5" marker-end="url(#va)" />
+
+  <!-- ⑤ 领域服务 -->
+  <g>
+    <rect x="40" y="516" width="820" height="76" rx="10" fill="#ffffff" stroke="#e3e8ee" />
+    <text x="64" y="559" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.4" fill="#8b949e">⑤ 领域服务</text>
+    <line x1="176" y1="534" x2="176" y2="574" stroke="#eef1f4" />
+    <rect x="196" y="537" width="118" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="255" y="559" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">MemoryEngine</text>
+    <text x="320" y="559" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="13" fill="#b1bcc7">→</text>
+    <rect x="326" y="537" width="118" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="385" y="559" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">ReportEngine</text>
+  </g>
+  <line x1="450" y1="598" x2="450" y2="620" stroke="#c3ccd4" stroke-width="1.5" marker-end="url(#va)" />
+
+  <!-- ⑥ 存储 -->
+  <g>
+    <rect x="40" y="626" width="820" height="76" rx="10" fill="#ffffff" stroke="#e3e8ee" />
+    <text x="64" y="669" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" font-weight="600" letter-spacing="1.4" fill="#8b949e">⑥ 存储</text>
+    <line x1="176" y1="644" x2="176" y2="684" stroke="#eef1f4" />
+    <rect x="196" y="647" width="140" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="266" y="669" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">SQLite（本地默认）</text>
+    <rect x="348" y="647" width="162" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="429" y="669" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">PostgreSQL + pgvector</text>
+    <rect x="522" y="647" width="74" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="559" y="669" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">Redis</text>
+    <rect x="608" y="647" width="74" height="34" rx="8" fill="#f6f8fa" stroke="#dde4ea" />
+    <text x="645" y="669" text-anchor="middle" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11.5" fill="#1f2328">MinIO</text>
+  </g>
+
+  <text x="40" y="742" font-family="ui-sans-serif, -apple-system, 'Segoe UI', 'PingFang SC', sans-serif" font-size="11" fill="#8b949e">本地路径 = SQLite + 进程内事件总线（无需 Docker、无需 API key）　·　全栈路径 = PostgreSQL/pgvector + Redis + MinIO + arq worker</text>
+</svg>
